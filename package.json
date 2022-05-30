@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^27.5.1",
+    "@types/parcel-env": "^0.0.1",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "parcel": "^2.6.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "ts-jest": "^28.0.3",
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "prebuild": "npm run clean",
+    "clean": "rm -rf dist/*",
+    "test": "jest"
+  },
+  "browserslist": [
+    "> 0.2% in NO",
+    "not dead"
+  ],
+  "prettier": {},
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom"
+  }
+}
