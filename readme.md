@@ -1,5 +1,15 @@
 # Minimum Viable Snek
 
+Welcome to React workshop! This is the sample project, a simple snek game.
+
+## How to build and run etc
+
+First, `npm install`. Then:
+
+- To run dev server: `npm start`, app now runs on <http://localhost:1234>
+- To do a production build: `npm run build`, build output now lives in `./dist`
+- To run tests: `npm test`
+
 ## Some ideas for additional features to add:
 
 - Add a scoreboard (use i.e. localStorage to store the scores)
