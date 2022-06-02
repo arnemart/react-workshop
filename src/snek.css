@@ -47,18 +47,18 @@
 .snek__part--head::after {
   content: "";
   display: block;
-  width: 0.25rem;
-  height: 0.25rem;
+  width: 20%;
+  height: 20%;
   border-radius: 100%;
   background-color: var(--bg);
   position: absolute;
-  top: 0.3rem;
-  left: 0.25rem;
+  top: 20%;
+  left: 20%;
 }
 
 .snek__part--head::after {
   left: auto;
-  right: 0.25rem;
+  right: 20%;
 }
 
 .snek__part--head.snek__part--head-Right {
