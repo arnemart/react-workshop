@@ -19,8 +19,11 @@ const GameMessage = ({ game, dispatch }: GameProps) => (
   </div>
 );
 
-type SnekProps = { snek: GameState["snek"]; direction: GameState["direction"] };
-const TheSnek = ({ snek, direction }: SnekProps) => (
+export type SnekProps = {
+  snek: GameState["snek"];
+  direction: GameState["direction"];
+};
+export const TheSnek = ({ snek, direction }: SnekProps) => (
   <>
     {snek.map(([x, y], i) => (
       <div
