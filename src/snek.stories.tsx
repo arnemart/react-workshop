@@ -1,5 +1,5 @@
 import React from "react";
-import { TheSnek } from "./snek";
+import { SnekProps, TheSnek } from "./snek";
 
 import "./snek.css";
 
@@ -8,7 +8,7 @@ export default {
   component: TheSnek,
 };
 
-export const JustTheSnek = () => (
+const Template = (args: SnekProps) => (
   <div
     className="snek"
     style={{
@@ -17,14 +17,21 @@ export const JustTheSnek = () => (
       height: "8rem",
     }}
   >
-    <TheSnek
-      direction="Right"
-      snek={[
-        [3, 1],
-        [2, 1],
-        [1, 1],
-        [1, 2],
-      ]}
-    />
+    <TheSnek {...args} />
   </div>
 );
+
+const defaultSnekProps: SnekProps = {
+  direction: "Right",
+  snek: [
+    [3, 1],
+    [2, 1],
+    [1, 1],
+    [1, 2],
+  ],
+};
+
+export const SimpleSnekStory = () => <Template {...defaultSnekProps} />;
+
+export const SnekStoryWithControls = Template.bind({});
+SnekStoryWithControls.args = defaultSnekProps;
