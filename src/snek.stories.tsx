@@ -3,7 +3,10 @@ import { TheSnek } from "./snek";
 
 import "./snek.css";
 
-export default {};
+export default {
+  title: "Snek",
+  component: TheSnek,
+};
 
 export const JustTheSnek = () => (
   <div

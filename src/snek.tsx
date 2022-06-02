@@ -20,7 +20,9 @@ const GameMessage = ({ game, dispatch }: GameProps) => (
 );
 
 export type SnekProps = {
+  /** Coordinates for the snek (array of `[x,y]` values, e.g. `[[2,1], [1,1]]`) */
   snek: GameState["snek"];
+  /** Where is he pointing */
   direction: GameState["direction"];
 };
 export const TheSnek = ({ snek, direction }: SnekProps) => (
