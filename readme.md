@@ -9,6 +9,7 @@ First, `npm install`. Then:
 - To run dev server: `npm start`, app now runs on <http://localhost:1234>
 - To do a production build: `npm run build`, build output now lives in `./dist`
 - To run tests: `npm test`
+- To run storybook: `npm run storybook`, storybook now runs on <http://localhost:1235>
 
 ## Some ideas for additional features to add:
 
