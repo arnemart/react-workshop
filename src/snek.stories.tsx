@@ -1,11 +1,11 @@
 import React from "react";
-import { SnekProps, TheSnek } from "./snek";
+import { SnekProps, Snek } from "./snek";
 
 import "./snek.css";
 
 export default {
   title: "Snek",
-  component: TheSnek,
+  component: Snek,
 };
 
 const Template = (args: SnekProps) => (
@@ -17,7 +17,7 @@ const Template = (args: SnekProps) => (
       height: "8rem",
     }}
   >
-    <TheSnek {...args} />
+    <Snek {...args} />
   </div>
 );
 

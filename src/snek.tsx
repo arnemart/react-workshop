@@ -25,7 +25,7 @@ export type SnekProps = {
   /** Where is he pointing */
   direction: GameState["direction"];
 };
-export const TheSnek = ({ snek, direction }: SnekProps) => (
+export const Snek = ({ snek, direction }: SnekProps) => (
   <>
     {snek.map(([x, y], i) => (
       <div
@@ -41,7 +41,7 @@ export const TheSnek = ({ snek, direction }: SnekProps) => (
 );
 
 type AppleProps = { apple: GameState["apple"] };
-const TheApple = ({ apple }: AppleProps) => (
+const Apple = ({ apple }: AppleProps) => (
   <div
     className="snek__apple"
     data-testid={`snek__apple--${apple[0]}-${apple[1]}`}
@@ -64,8 +64,8 @@ const GameBoard = ({ game, dispatch }: GameProps) => (
       <GameMessage game={game} dispatch={dispatch} />
       {game.running && (
         <>
-          <TheSnek snek={game.snek} direction={game.direction} />
-          <TheApple apple={game.apple} />
+          <Snek snek={game.snek} direction={game.direction} />
+          <Apple apple={game.apple} />
         </>
       )}
     </div>
