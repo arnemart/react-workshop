@@ -11,11 +11,9 @@ const points = (pts: number) => `${pts} point${pts == 1 ? "" : "s"}`;
 const GameMessage = ({ game, dispatch }: GameProps) => (
   <div className="snek__message">
     {game.crashed && <div>You crashed! You got {points(game.score)}.</div>}
-    {!game.running && (
-      <button onClick={() => dispatch("Start")}>
-        {game.crashed ? "Restart game" : "Start game"}
-      </button>
-    )}
+    <button onClick={() => dispatch("Start")}>
+      {game.crashed ? "Restart game" : "Start game"}
+    </button>
   </div>
 );
 
@@ -61,12 +59,13 @@ const GameBoard = ({ game, dispatch }: GameProps) => (
         gridTemplate: `repeat(${game.width}, 1fr) / repeat(${game.height}, 1fr)`,
       }}
     >
-      <GameMessage game={game} dispatch={dispatch} />
-      {game.running && (
+      {game.running ? (
         <>
           <Snek snek={game.snek} direction={game.direction} />
           <Apple apple={game.apple} />
         </>
+      ) : (
+        <GameMessage game={game} dispatch={dispatch} />
       )}
     </div>
     <div>{points(game.score)}</div>
